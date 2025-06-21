@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gadget Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      padding: 2rem;
+      background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9') no-repeat center;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .product {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+    .product p {
+      color: green;
+      font-weight: bold;
+    }
+    .btn {
+      background: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">GadgetHub</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to GadgetHub</h1>
+    <p>Your one-stop shop for the latest electronics and accessories</p>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e" alt="Smartphone">
+      <h3>Smartphone Pro Max</h3>
+      <p>₹49,999</p>
+      <button class="btn" onclick="addToCart('Smartphone Pro Max')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1589395937772-f21b2bb75dba" alt="Laptop">
+      <h3>Ultra Laptop 15"</h3>
+      <p>₹79,999</p>
+      <button class="btn" onclick="addToCart('Ultra Laptop')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1592890287059-fb4c5c157bad" alt="Headphones">
+      <h3>Noise Cancelling Headphones</h3>
+      <p>₹4,999</p>
+      <button class="btn" onclick="addToCart('Headphones')">Add to Cart</button>
+    </div>
+  </section>
+
+  <script>
+    function addToCart(product) {
+      alert(product + ' has been added to your cart!');
+    }
+  </script>
+
+</body>
+</html>
